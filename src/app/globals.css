@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --accent-orange: #ff6b35;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent-orange);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-orange);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff8555;
+}
+
+/* Smooth transitions */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* Impact font fallback */
+.impact-font {
+  font-family: Impact, "Arial Black", "Franklin Gothic Bold", sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+/* Diamond mesh background pattern */
+.bg-diamond-mesh {
+  background-color: #000;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.25) 2px, transparent 2px),
+    linear-gradient(45deg, transparent 49.5%, rgba(255,255,255,0.12) 49.5%, rgba(255,255,255,0.12) 50.5%, transparent 50.5%),
+    linear-gradient(-45deg, transparent 49.5%, rgba(255,255,255,0.12) 49.5%, rgba(255,255,255,0.12) 50.5%, transparent 50.5%);
+  background-size: 60px 60px, 60px 60px, 60px 60px;
+  background-position: 0 0, 0 0, 0 0;
+}
+
+/* Radial gradient for vignette effect */
+.bg-gradient-radial {
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0.7) 70%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+}
